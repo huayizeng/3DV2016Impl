@@ -39,7 +39,7 @@ def set_position(event, x, y, flags, param):
         print(line)
 
 
-img = cv2.imread('test.png')
+img = cv2.imread('../data/test.png')
 cv2.namedWindow('image')
 cv2.setMouseCallback('image', set_position)
 
@@ -51,9 +51,9 @@ while 1:
         break
 
 cv2.destroyAllWindows()
-cv2.imwrite('test_marked.png', img)
+cv2.imwrite('../data/test_marked.png', img)
 
-with open('data.pkl','wb') as f:
+with open('../data/data.pkl','wb') as f:
     pickle.dump(line_sets, f)
 
 # [[500 234]
