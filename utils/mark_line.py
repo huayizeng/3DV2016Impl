@@ -4,7 +4,6 @@ from IPython import embed
 import numpy as np
 import random
 
-<<<<<<< HEAD
 # line_sets = []
 # x1 = -1
 # y1 = -1
@@ -93,7 +92,7 @@ def vp(cluster):
     for i in range(cluster.shape[0]):
         k, b = get_line(cluster[i])
 
-=======
+# =======
 line_sets = []
 x1 = -1
 y1 = -1
@@ -151,4 +150,3 @@ with open('../data/data.pkl','wb') as f:
 # line saved!
 # [[600 195]
 #  [694 290]]
->>>>>>> 96fea252d01b862358ce790e7d4d5720116da6ef
