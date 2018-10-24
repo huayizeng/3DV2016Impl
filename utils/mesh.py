@@ -1,6 +1,7 @@
 import re
 import os
 import numpy as np
+from IPython import embed
 
 def read_obj(filename):
     f = open(filename, "r") 
@@ -13,7 +14,8 @@ def read_obj(filename):
     v_pattern = re.compile(r"v\s+([+-]?\d+[.]*\d*)\s+([+-]?\d+[.]*\d*)\s+([+-]?\d+[.]*\d*)\s+([+-]?\d+[.]*\d*)")
     f_pattern = re.compile(r"f\s+(\d+[.]*\d*)\s+(\d+[.]*\d*)\s+(\d+[.]*\d*)")
     for line in f:
-        if line[0] == "v":
+        if line[0] == "v" and line[1] == " ":
+
             m = line.split()
             vertices.append( [ float(m[1]), float(m[2]), float(m[3]) ] )
 
