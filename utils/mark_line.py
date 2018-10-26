@@ -54,7 +54,7 @@ while 1:
 cv2.destroyAllWindows()
 cv2.imwrite('../data/test_marked.png', img)
 
-with open('../data/data.pkl','wb') as f:
+with open('../data/lines_set.pkl','wb') as f:
     pickle.dump(line_sets, f)
 #
 # # [[500 234]

@@ -8,6 +8,7 @@ import os
 import cv2  
 from IPython import embed
 from mesh import read_obj
+import pickle
 
 def get_cam_matrix():
     f = 450.0
@@ -58,3 +59,6 @@ if __name__ == '__main__':
         im_reprojection[p0_y, p0_x] = 255
     path_image = "im_reprojection.jpg"
     cv2.imwrite(path_image, im_reprojection)
+
+    with open("../data/origin_points.pkl", "wb") as f:
+        pickle.dump(point_set, f)
