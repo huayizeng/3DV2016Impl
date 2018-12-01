@@ -1,7 +1,6 @@
 import numpy as np
 from numpy import *
 import pickle
-import 
 from IPython import embed
 
 ###################### data import ##############################################
@@ -17,7 +16,7 @@ with open("../data/cluster.pkl", "rb") as f:
     cluster = pickle.load(f)
 
 # owing that the lines marked has been clustered. Thus we create a new cluster for the cluster generation
-origin_cluster = cluster[1:4]
+origin_cluster = cluster
 cluster_normal = [0 for _ in range(origin_cluster.shape[0])]
 
 with open("../data/faces.pkl", "rb") as f:
